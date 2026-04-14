@@ -20,8 +20,8 @@ This project is a Flask-based API that generates data visualizations from struct
 
 * Accepts data via API (`/visualize`)
 * Converts raw input into DataFrame
-* Generates bar charts dynamically
-* Suggests graph type using AI (Ollama)
+* Generates charts dynamically
+* Suggests graph type using AI
 * Returns visualization as image
 
 ---
@@ -47,21 +47,48 @@ pip install flask pandas matplotlib flask-cors
 python app.py
 ```
 
-### 3. API Endpoint
+---
 
-```
-POST /visualize
-```
+## ⚠️ How to Use (IMPORTANT)
+
+This project does NOT have a frontend UI.
+
+👉 To generate visualization, you must use **Postman** or any API testing tool.
 
 ---
 
-## 📥 Sample Input
+## 📬 Using Postman
+
+### Step 1:
+
+* Open Postman
+* Select **POST** method
+
+### Step 2:
+
+Enter URL:
+
+```
+http://localhost:5000/visualize
+```
+
+### Step 3:
+
+Go to **Body → raw → JSON**
+
+### Step 4:
+
+Paste sample input:
 
 ```json
 {
   "results": "product_category_name purchase_count\ncama_mesa_banho 11115\nbeleza_saude 9670"
 }
 ```
+
+### Step 5:
+
+Click **Send**
 
 ---
 
@@ -73,9 +100,9 @@ POST /visualize
 
 ## 🧠 Future Improvements
 
-* Add multiple chart types
-* Improve UI integration
-* Add real-time dashboard
+* Add frontend UI
+* Support multiple chart types
+* Real-time dashboard
 
 ---
 
